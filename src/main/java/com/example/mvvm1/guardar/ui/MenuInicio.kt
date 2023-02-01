@@ -1,4 +1,4 @@
-package com.example.clientesv1.screens
+package com.example.mvvm1.guardar.ui
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
@@ -16,9 +16,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import com.example.clientesv1.R
-import com.example.clientesv1.navigation.AppScreens
-import com.example.clientesv1.navigation.AppNavigation
+import com.example.Preguntasv1.R
+import com.example.Preguntasv1.navigation.AppScreens
+import com.example.Preguntasv1.navigation.AppNavigation
 
 @Composable
 fun MenuInicio(navController: NavHostController) {
@@ -55,7 +55,7 @@ fun MenuInicio(navController: NavHostController) {
             //Spacer(modifier = Modifier.size(10.dp))
 
             Text(
-                text = "Clientes",
+                text = "Preguntas",
                 fontSize = 28.sp,
                 fontWeight = FontWeight.ExtraBold,
 
@@ -65,7 +65,7 @@ fun MenuInicio(navController: NavHostController) {
 
             Button(
                 onClick = {
-                    navController.navigate("GuardarCliente")
+                    navController.navigate("GuardarPregunta")
 
 
                 },
@@ -83,7 +83,7 @@ fun MenuInicio(navController: NavHostController) {
 
             Button(
                 onClick = {
-                    navController.navigate("ModificarCliente")
+                    navController.navigate("ModificarPregunta")
                 },
                 colors = ButtonDefaults.buttonColors(
                     backgroundColor = Color.Blue,
@@ -99,7 +99,7 @@ fun MenuInicio(navController: NavHostController) {
 
             Button(
                 onClick = {
-                    navController.navigate("BorrarCliente")
+                    navController.navigate("BorrarPregunta")
                 },
                 colors = ButtonDefaults.buttonColors(
                     backgroundColor = Color.Blue,
@@ -115,7 +115,7 @@ fun MenuInicio(navController: NavHostController) {
 
             Button(
                 onClick = {
-                    navController.navigate("ConsultarCliente")
+                    navController.navigate("ConsultarPregunta")
                 },
                 colors = ButtonDefaults.buttonColors(
                     backgroundColor = Color.Blue,
@@ -131,7 +131,7 @@ fun MenuInicio(navController: NavHostController) {
 
             Button(
                 onClick = {
-                    navController.navigate("InformeClientes")
+                    navController.navigate("InformePreguntas")
                 },
                 colors = ButtonDefaults.buttonColors(
                     backgroundColor = Color.Blue,

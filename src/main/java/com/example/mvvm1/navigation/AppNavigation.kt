@@ -10,11 +10,28 @@ import com.example.mvvm1.view.*
 @Composable
 fun AppNavigation() {
     val navigationController = rememberNavController()
-    NavHost(navController = navigationController, startDestination = AppScreens.MenuInicio.ruta)
+    NavHost(navController = navigationController, startDestination = AppScreens.MenuInicio.ruta) {
+        composable(AppScreens.BorrarPregunta.ruta) {
+            BorrarPregunta(navigationController), ViewModel
+        }
 
-    {
-        //composable(AppScreens.MenuInicio.ruta) { MenuInicio(navigationController) }
-        //composable(AppScreens.GuardarDatos.ruta) { GuardarDatos(navigationController) }
+        composable(AppScreens.MenuInicio.ruta) {
+            ConsultarPregunta(navigationController), ViewModel
+        }
 
+        composable(AppScreens.GuardarPregunta.ruta) {
+            GuardarPregunta(navigationController), ViewModel
+        }
+
+        composable(AppScreens.InformePregunta.ruta) {
+            InformePregunta(navigationController), ViewModel
+        }
+
+        composable(AppScreens.MenuInicio.ruta) {
+            MenuInicio(navigationController), ViewModel
+        }
+        composable(AppScreens.ModificarPregunta.ruta) {
+            ModificarPregunta(navigationController), ViewModel
+        }
     }
 }

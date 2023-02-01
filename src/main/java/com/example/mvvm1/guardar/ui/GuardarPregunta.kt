@@ -12,6 +12,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.google.firebase.firestore.FirebaseFirestore
 
+
 @Composable
 fun GuardarDatos(ViewModel: ViewModel) {
 
@@ -134,5 +135,12 @@ fun GuardarDatos(ViewModel: ViewModel) {
             Spacer(modifier = Modifier.size(5.dp))
             Text(text = mensaje_confirmacion)
         }
+    }
+}
+@Preview(showBackground = true, showSystemUI = true)
+@Composable
+fun previewPrueba() {
+    Mvvm1Theme {
+        GuardarDatos()
     }
 }
